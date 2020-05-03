@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Tipue Search
 ============
@@ -9,7 +8,6 @@ that can be used by jQuery plugin - Tipue Search.
 Copyright (c) Talha Mansoor
 """
 
-from __future__ import unicode_literals
 
 import os.path
 import json
@@ -24,7 +22,7 @@ except ImportError:
 from pelican import signals
 
 
-class Tipue_Search_JSON_Generator(object):
+class Tipue_Search_JSON_Generator:
     def __init__(self, context, settings, path, theme, output_path, *null):
 
         self.output_path = output_path
