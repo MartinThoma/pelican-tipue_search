@@ -9,17 +9,19 @@ Copyright (c) Talha Mansoor
 """
 
 
-import os.path
+# Core Library modules
 import json
-from bs4 import BeautifulSoup
+import os.path
 from codecs import open
+
+# Third party modules
+from bs4 import BeautifulSoup
+from pelican import signals
 
 try:
     from urlparse import urljoin
 except ImportError:
     from urllib.parse import urljoin
-
-from pelican import signals
 
 
 class Tipue_Search_JSON_Generator:
