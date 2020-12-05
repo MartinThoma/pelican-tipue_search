@@ -64,7 +64,10 @@ class Tipue_Search_JSON_Generator:
         else:
             page_category = page.category.name
 
-        page_url = self.siteurl + "/" + page.url
+        if page.url.startswith('http'):
+            page_url = page.url
+        else:
+            page_url = self.siteurl + "/" + page.url
 
         node = {
             "title": page_title,
